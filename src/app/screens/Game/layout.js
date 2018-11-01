@@ -1,11 +1,13 @@
 
-import Board from '../components/Board';
-import './styles.css'
+import React from 'react';
+import Board from '../../components/Board';
+import PropTypes from 'prop-types';
+import './styles.css';
 
 function GameLayout({status, squares, handleClick, moves }){
     return (
       <div className="game">
-        <div className="game-board">∫
+        <div className="game-board">
           <Board
             squares={squares}
             onClick={(i) => handleClick(i)}
@@ -17,6 +19,13 @@ function GameLayout({status, squares, handleClick, moves }){
         </div>
       </div>
     );
+}
+
+GameLayout.propTypes = {
+  status: PropTypes.string,
+  handleClick: PropTypes.func.isRequired,
+  moves: PropTypes.arrayOf(PropTypes.string),
+  squares: PropTypes.array
 }
 
 export default GameLayout;

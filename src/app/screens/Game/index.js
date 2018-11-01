@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
 import GameLayout from './layout';
 
 function calculateWinner(squares) {
@@ -72,11 +70,7 @@ class Game extends Component {
     });
 
     let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-    }
+    winner ? status = 'Winner: ' + winner : status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
 
     return (
       <GameLayout status={status} squares={current.squares} handleClick={this.handleClick} moves={moves} />
