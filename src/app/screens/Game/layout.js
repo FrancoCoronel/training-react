@@ -25,7 +25,7 @@ GameLayout.propTypes = {
   status: PropTypes.string,
   handleClick: PropTypes.func.isRequired,
   moves: PropTypes.arrayOf(PropTypes.string),
-  squares: PropTypes.array
+  squares: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default GameLayout;

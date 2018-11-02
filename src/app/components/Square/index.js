@@ -10,9 +10,4 @@ function Square(props) {
     );
   }
 
-  Square.propTypes = {
-    value: PropTypes.string,
-    onClick: PropTypes.array
-  }
-
 export default Square;
