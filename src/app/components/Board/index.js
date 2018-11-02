@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+
 import Square from '../Square';
+
 import BoardLayout from './layout';
 import './styles.css';
 

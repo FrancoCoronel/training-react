@@ -1,10 +1,10 @@
 
-import React from 'react';
+import React, {Fragment} from 'react';
 import './styles.css';
 
 function BoardLayout({renderSquare}){
     return (
-        <div>
+        <Fragment>
           <div className="board-row">
             {renderSquare(0)}
             {renderSquare(1)}
@@ -20,7 +20,7 @@ function BoardLayout({renderSquare}){
             {renderSquare(7)}
             {renderSquare(8)}
           </div>
-        </div>
+        </Fragment>
     );
 }
 
